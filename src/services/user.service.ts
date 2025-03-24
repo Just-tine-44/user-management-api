@@ -15,6 +15,17 @@ class UserService {
         const user = userRepository.create({ ...userData, password: hashedPassword }); 
         return userRepository.save(user); 
     }
+
+    static async deleteUser(id: number): Promise<void> {
+        const userRepository = getRepository(User);
+        const user = await userRepository.findOne({ where: { id } });
+        
+        if (!user) {
+            throw new Error("User not found");
+        }
+        
+        await userRepository.remove(user);
+    }
 }
 
 export default UserService;
