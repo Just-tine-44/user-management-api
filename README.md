@@ -38,11 +38,11 @@ DB_NAME=user_management
 npm start
 
 # Authentication:
-POST /api/auth/register → Register a user
+POST /api/auth/register → Register a user,
 POST /api/auth/login → Authenticate and get JWT
 
 # Users:
-POST /api/users/ → Create a user
-GET /api/users/ → Get all users
-GET /api/users/:id → Get user by ID
+POST /api/users/ → Create a user,
+GET /api/users/ → Get all users,
+GET /api/users/:id → Get user by ID,
 DELETE /api/users/:id → Delete user
